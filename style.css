@@ -33,6 +33,56 @@ main {
   min-width: 300px;
 }
 
+/* Add styles for card-based weather display */
+.weather-card {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.weather-card h4 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #1d1d1f;
+}
+
+.weather-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #6e6e73;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+}
+
+/* Ensure the canvas for the graph is styled properly */
+canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Add styles to hide the rain table by default */
+.hidden {
+  display: none;
+}
+
+/* Add styles for the button to toggle the table */
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 footer {
   margin-top: 40px;
   font-size: 0.9rem;

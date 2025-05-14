@@ -82,11 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
               return `<tr><td>${hourlyLabels[hour]}</td><td>${Math.max(0, precip)} mm</td></tr>`;
             }).join('');
 
+            // Add current temperature in bold (value only) for Today only, with normal font size
+            let currentTempHtml = '';
+            if (i === 0 && data.current_weather && typeof data.current_weather.temperature === 'number') {
+              currentTempHtml = `<p>Current Temp: <span style="font-weight:bold;">${data.current_weather.temperature}°C</span></p>`;
+            }
+
             // Add a dropdown with a table of times and rain amounts
             weatherContainer.innerHTML += `
               <div class="weather-card">
                 <h4>${daysOfWeek[i]}</h4>
                 <div class="weather-icon">${weatherIcon}</div>
+                ${currentTempHtml}
                 <p>Max Temp: ${data.daily.temperature_2m_max[i]}°C</p>
                 <p>Min Temp: ${data.daily.temperature_2m_min[i]}°C</p>
                 <p>Rain: ${data.daily.precipitation_sum[i]} mm</p>

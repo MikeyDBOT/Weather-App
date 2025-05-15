@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
           };
 
           // Display weather data in card format
-          weatherContainer.innerHTML = '<h2>Weekly Weather Forecast</h2>';
+          weatherContainer.innerHTML = '<h2></h2>';
           for (let i = 0; i < daysOfWeek.length; i++) {
             const weatherCode = data.daily.weathercode[i];
             const weatherIcon = weatherIcons[weatherCode] || '❓'; // Default icon for unknown codes
